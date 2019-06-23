@@ -3,7 +3,7 @@ from google_images_download import google_images_download
 #for downloading image
 response = google_images_download.googleimagesdownload() 
 #funciton for downloading images
-def downloadimages(search_item,n_item): 
+def download_img(search_item,n_item): 
 	arguments = {"keywords": search_item, "format": "jpg", "limit":n_item, "aspect_ratio": "panoramic"} 
 	try: 
 		response.download(arguments) 
@@ -11,7 +11,7 @@ def downloadimages(search_item,n_item):
 		pass
 
 search_item=raw_input("What you want to search?, Please enter=")
-n_item=int(raw_input("Enter number Images you want to search="))
+n_item=int(raw_input("Enter number Images you want to download="))
 
-downloadimages(search_item,n_item) 
+download_img(search_item,n_item) 
 print()
